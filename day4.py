@@ -18,8 +18,8 @@ def part1():
         return total
 
 def part2():
+    total2 = 0
     with open('inputday4.txt', 'r') as f:
-        total2 = 0
         for line in f:
             currentrow = (line.split(" "))
             # cut newlines first
@@ -30,8 +30,8 @@ def part2():
             if len(realrow) == len(set(realrow)):
                 print(realrow)
                 total2 += 1
-        print(total2)
-        return total2
+    print(total2)
+    return total2
 
 #part1()
 part2()
