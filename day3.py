@@ -61,4 +61,5 @@ print(writespiral(day4inp))
 
 # last output = -257 -257 515 E 264711 which is 438 steps away from the goal
 #, y = -257, x = -257, moving east 438 steps so final coords: 181, -257 = 438 steps away from the start
+
 # part 2: used this: https://oeis.org/A141481
