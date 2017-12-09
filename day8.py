@@ -4,7 +4,10 @@ if the conditional is true, perform the change
 Find what the largest register is at the end
 """
 
-registers = {}
+from collections import defaultdict
+
+# store register values here
+registers = defaultdict(int)
 
 # extract variables from the instruction
 
@@ -24,12 +27,6 @@ with open('inputday8.txt', 'r') as f:
         ) = line.split()
         change_value, check_value = int(change_value), int(check_value)
         print(check_register, operator, check_value)
-
-        # update registers with newly encountered dicts
-        if change_register not in registers.keys():
-            registers[change_register] = 0
-        if check_register not in registers.keys():
-            registers[check_register] = 0
 
         # logic on the check; different operators
         perform_operation = False
