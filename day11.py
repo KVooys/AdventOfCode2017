@@ -3,6 +3,7 @@ Input is a set of hex movements
 Find the Manhatten distance to the center hex after all movements are executed
 """
 
+
 # I used cube coords to easily find max distance.
 # First I define movements
 def move_n(x, y, z):
@@ -10,25 +11,30 @@ def move_n(x, y, z):
     z -= 1
     return x, y, z
 
+
 def move_nw(x, y, z):
     x -= 1
     y += 1
     return x, y, z
+
 
 def move_ne(x, y, z):
     x += 1
     z -= 1
     return x, y, z
 
+
 def move_s(x, y, z):
     y -= 1
     z += 1
     return x, y, z
 
+
 def move_sw(x, y, z):
     x -= 1
     z += 1
     return x, y, z
+
 
 def move_se(x, y, z):
     x += 1
@@ -43,7 +49,7 @@ with open('inputday11.txt', 'r') as f:
     highestval = 0
     for i in movements:
 
-        #execute movement
+        # execute movement
         if i == "n":
             x, y, z = move_n(x, y, z)
         if i == "nw":
