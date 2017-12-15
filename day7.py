@@ -9,7 +9,7 @@ totalprogs = set()
 childprogs = set()
 diskweight = defaultdict(int)
 
-with open('testinputday7.txt', 'r') as f:
+with open('inputday7.txt', 'r') as f:
     for line in f:
         currentrow = (line.split())
         # first result is the prog, 2nd is the weight, 4th and up are the child programs
