@@ -6,9 +6,9 @@ from collections import defaultdict, Counter
 
 # used these two functions from the megathread to get a cleaner solution for part 2, thank you!
 
-def find_weight(weights, children, node, memo={}):
-    # Recursively add the weight of the node to the weight of its children.
-    return weights[node] + sum([find_weight(weights, children, child, memo) for
+def find_weight(weights, children, node):
+    # Recursively add the weight of the children to the weight of the carrying node
+    return weights[node] + sum([find_weight(weights, children, child) for
                                 child in children[node]])
 
 def find_imbalance(weights, children, node):
